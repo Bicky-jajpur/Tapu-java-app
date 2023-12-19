@@ -1,0 +1,49 @@
+Create Account
+Create Organization
+Create Repository unde the Org
+
+Take a Linux machine(EC2/onprem)
+Connect the linux machine
+Install Git
+   -  apt-get update
+   - apt-get install git -y
+   - git --version
+
+Make your Project Dir Project
+cd Project
+  git clone <Existing Git central repo URL>                 # Used to point to an existing repo and make a clone or copy of that repo at in a new directory , at another location        
+  git clone https://github.com/AVD-Group-BBSR/java-web-app.git
+ 
+
+/home/ubuntu/Project/java-web-app
+cd /home/ubuntu/Project/java-web-app
+Create files f1.txt
+
+Check if .git folder is present or not. If present no need of git init command
+if not present the run git init command
+
+
+
+mkdir /home/ubuntu/Project/java-web-app
+cd /home/ubuntu/Project/java-web-app
+git init                             # creates a new git repository / initialize repository
+Create file f1.txt
+Create file f2.txt
+Create file index.html
+
+git status                           # Display the state of the working directory and the staging area 
+git add .   :                        # Add a change in the working directory to the staging area 
+git commit -m "initial commit"       # It will push our code/file to staging area to local repo
+git rm --cached <fileName>           # removes the copy of the file from staging area .
+git log                              # display all of the commits in a repository's history 
+git reset --hard <commit id >        # Discard any local changes made to the files.
+git diff                             # helps you to see , compare ,and understand changes in your project
+Pushing the code to Central Repo
+--------------------------------
+
+git remote add <xyz> <git https URL>                      # It provides an easy way to pull upstream changes or publish local commits.
+Check ur branch and github branch is matching or not
+git branch -M main
+
+git push xyz main                                         # it push our code local repo to remote repo
+
